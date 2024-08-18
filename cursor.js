@@ -38,14 +38,12 @@ document.addEventListener('DOMContentLoaded', function () {
             // Для мобильных устройств
             if (catalogMenu.style.display === 'block') {
                 catalogMenu.style.opacity = '0';
-                setTimeout(() => {
-                    catalogMenu.style.display = 'none'; // Скрываем меню после завершения анимации
-                }, 500); // Длительность анимации
+                catalogMenu.style.display = 'none'; // Скрываем меню после завершения анимации
+
             } else {
                 catalogMenu.style.display = 'block'; // Отображаем меню
-                setTimeout(() => {
-                    catalogMenu.style.opacity = '1';
-                }, 10); // Небольшая задержка для применения opacity
+                catalogMenu.style.opacity = '1';
+
             }
         }
     }
@@ -56,11 +54,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Переключение меню при изменении размера окна
-    window.addEventListener('resize', function () {
-        if (window.innerWidth >= 769) {
-            catalogMenu.style.display = 'none'; // Убедимся, что меню скрыто на больших экранах
-        } else {
-            catalogMenu.style.display = 'block'; // Убедимся, что меню отображается на мобильных устройствах
-        }
-    });
+    // window.addEventListener('resize', function () {
+    //     if (window.innerWidth >= 769) {
+    //         catalogMenu.style.display = 'none'; // Убедимся, что меню скрыто на больших экранах
+    //     } else {
+    //         catalogMenu.style.display = 'block'; // Убедимся, что меню отображается на мобильных устройствах
+    //     }
+    // });
 });
