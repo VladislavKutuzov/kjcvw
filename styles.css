@@ -1,0 +1,438 @@
+body {
+    font-family: "Exo 2", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    background-color: #ff0000;
+}
+
+
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Шапка и навигация */
+header {
+    background: #fcbb14;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Адаптация шапки для небольших экранов */
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color: #dfa512;;
+}
+
+.infoh {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Отступ между элементами на узких экранах */
+}
+
+.ml {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    padding: 0 20px;
+    font-size: 20px;
+}
+
+.ml:hover {
+    background: #dfa512;
+    cursor: pointer;
+}
+
+.home img {
+    width: 40px;
+}
+
+.number img {
+    width: 30px;
+}
+
+/* Меню */
+.menu {
+    background: #000;
+    color: white;
+    position: sticky;
+    top: 0px;
+    z-index: 1000000;
+}
+
+.menu a {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    text-decoration: none;
+    color: white;
+}
+
+.menu a:hover {
+    color: #dfa512;
+}
+
+.menu .container {
+    padding: 0;
+}
+
+.menu__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Адаптация меню для узких экранов */
+}
+
+.menu__inner img {
+    width: 26px;
+    margin: 0px 10px;
+}
+
+.menu__inner-menu {
+    display: flex;
+}
+
+.menu__inner-menu  a{
+    padding: 10px 30px;
+}
+
+/* Стили карточек */
+.tool-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px;
+    width: calc(29% - 40px);
+    display: inline-block;
+    vertical-align: top;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+/* Слайдер */
+.slider {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.slider-controls .prev,
+.slider-controls .next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.slider-controls .prev {
+    border-radius: 15px 4px 4px 15px;
+}
+
+.slider-controls .next {
+    border-radius: 4px  15px 15px 4px;
+}
+
+
+.slider-controls .prev:hover,
+.slider-controls .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.tool-card p {
+    margin: 0;
+}
+
+.tool-card .new {
+    background: black;
+    color: white;
+    padding: 10px 25px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    font-weight: bold;
+    z-index: 999;
+}
+
+.tool-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.brand {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #777;
+    font-weight: bold;
+}
+
+.tool-card .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.tool-card .description {
+    color: black;
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin: 0 0 15px 0;
+}
+
+.tool-card .features {
+    font-weight: bold;
+    padding: 0;
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    color: black;
+}
+
+.tool-card .featuresInfo {
+    padding: 0;
+    margin: 0 0 0 0;
+    font-size: 16px;
+    color: black;
+}
+
+.tool-card .price {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 24px;
+    color: black;
+}
+
+.tool-card .prices {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.tool-card .oldprice {
+    margin-left: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 25px;
+    color: rgb(160, 160, 160);
+    text-decoration: line-through;
+}
+
+.tool-card .priceInfo {
+    font-size: 14px;
+    color: rgb(124, 124, 124);
+}
+
+.tool-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.tool-info .quantity {
+    font-weight: bold;
+}
+
+.tool-card .btn-telephone {
+    background: #fcbb14;
+    border: 0px;
+    border-radius: 6px;
+    padding: 7px 30px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.tool-card .btn-telephone:hover {
+    background: #dfa512;
+}
+
+.tool-card .btn-telephone img {
+    margin-top: 3px;
+    margin-right: 3px;
+    width: 25px;
+}
+
+.prices .no--OldPrice {
+    display: none;
+}
+
+/* Адаптивность */
+@media screen and (max-width: 1024px) {
+    .tool-card {
+        width: calc(45% - 40px); /* Уменьшена ширина карточек на планшетах */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tool-card {
+        width: calc(50% - 30px); /* Уменьшена ширина карточек на планшетах и маленьких экранах */
+        margin: 15px 10px;
+    }
+
+    .header__inner {
+        flex-direction: column; /* Вертикальное расположение элементов шапки */
+    }
+
+    .menu__inner {
+        flex-direction: column; /* Вертикальное расположение элементов меню */
+    }
+
+    .menu__inner a {
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .tool-card {
+        width: 90%; /* Карточки занимают всю ширину экрана */
+        margin: 15px 0;
+    }
+
+    header {
+        padding: 10px 0;
+    }
+
+    .header__inner {
+        text-align: center; /* Центровка контента в шапке */
+    }
+
+    .menu__inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu__inner a {
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* Слайдерные точки */
+.slider-dots {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.slider-dots .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-dots .dot.active {
+    background-color: #717171;
+}
+
+/* Специфические стили для брендов */
+.BOSCH {
+    background: #e9e9e9;
+    display: inline-block;
+    padding: 2px 5px;
+    color: #e10e18;
+    font-family: "Moderustic", sans-serif;
+    font-weight: 800;
+}
+
+.MAKITA {
+    width: 87px;
+    height: 32px;
+    display: inline-block;
+    background: url("./images/makita-logo.jpg");
+    background-size: 85px;
+    background-position: 1px 40px;
+    color: transparent;
+}
+
+
+/* Меню */
+/* Плавное изменение прозрачности */
+.menu__inner-menu {
+    display: none; /* По умолчанию меню скрыто */
+    opacity: 0; /* Начальное значение прозрачности */
+    transition: opacity 0.5s ease-in-out; /* Переход для плавного изменения прозрачности */
+}
+
+.menu__inner-menu.show {
+    display: block; /* Меню отображается */
+    opacity: 1;
+}
+
+
+.menu__inner-menu a {
+    padding: 10px 15px;
+    border-top: 1px solid #333;
+}
+
+
+/* Плавное изменение прозрачности */
+.menu__inner-menu {
+    display: none; /* По умолчанию меню скрыто */
+    opacity: 0; /* Начальное значение прозрачности */
+    transition: opacity 0.5s ease-in-out; /* Переход для плавного изменения прозрачности */
+}
+
+/* Для мобильных устройств */
+@media screen and (max-width: 768px) {
+    .menu__inner-menu {
+        display: none; /* Меню отображается как block на мобильных устройствах */
+    }
+    .menu__inner-menu.show {
+        opacity: 1; /* Прозрачность 100% */
+    }
+}
+
+/* Для больших экранов */
+@media screen and (min-width: 769px) {
+    .menu__inner-menu {
+        display: flex; /* Показываем меню как flex на больших экранах */
+        flex-direction: row;
+    }
+    .menu__inner-menu.show {
+        opacity: 1; /* Прозрачность 100% */
+    }
+}
+

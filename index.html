@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Строительные инструменты</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Days+One&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Play:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <script src="https://www.google.com/jsapi"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <!-- подключаем для работы Google Charts -->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script src="main.js"></script>
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header__inner">
+                <h1>Строительные инструменты</h1>
+                <div class="infoh">
+                    <div class="ml home">
+                        <img src="images/home.png" alt="Адрес">
+                        Екатеринбург,  Кишинёвская ул., 37
+                    </div>
+                </div>
+
+                <div class="infoh">
+                    <div class="ml number">
+                        <img src="images/telephone.png" alt="Телефон">
+                        8908-00-00-000
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="menu">
+        <div class="container">
+            <div class="menu__inner">
+                <a href="#" id="catalog-toggle" class="catalog-toggle">Каталог<img src="images/menu (1).png"></a>
+                <div class="menu__inner-menu" id="catalog-menu">
+                    <a href="" data-type="network">Сетевые инструменты (220В)</a>
+                    <a href="" data-type="battery">Аккумуляторные инструменты</a>
+                    <a href="" data-type="sets">Наборы</a>
+                    <a href="" data-type="other">Другое</a>
+                    <a href="" class="stocks"><img src="images/offer (1).png">Акции</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="tasksTableDiv"></div>
+
+
+    <main class="container">
+        <!-- Секция сетевых инструментов -->
+        <h2 class="titlee"><a href="" data-type="">Все инструменты </a><span id="toolsTitle"></span></h2>
+        <section id="network-tools">
+
+
+        </section>
+    </main>
+
+    <div id="custom-cursor"></div>
+
+    <script src="cursor.js"></script>
+
+</body>
+</html>
