@@ -56,11 +56,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Переключение меню при изменении размера окна
-    window.addEventListener('resize', function () {
-        if (window.innerWidth >= 769) {
-            catalogMenu.style.display = 'none'; // Убедимся, что меню скрыто на больших экранах
-        } else {
-            catalogMenu.style.display = 'block'; // Убедимся, что меню отображается на мобильных устройствах
-        }
-    });
+    // window.addEventListener('resize', function () {
+    //     if (window.innerWidth >= 769) {
+    //         catalogMenu.style.display = 'none'; // Убедимся, что меню скрыто на больших экранах
+    //     } else {
+    //         catalogMenu.style.display = 'block'; // Убедимся, что меню отображается на мобильных устройствах
+    //     }
+    // });
 });
