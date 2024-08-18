@@ -78,25 +78,32 @@ function generateHTML(data, typeFilter) {
         // Проверка, если с момента публикации прошло больше недели
         var isNew = (today - publishDate) <= 14 * 24 * 60 * 60 * 1000; // 14 дней в миллисекундах
 
-        // Собираем все данные в объект
-        var toolData = {
-            publishDate: publishDate,
-            isNew: isNew,
-            brand: brand,
-            title: title,
-            description: description,
-            price: price,
-            oldPrice: oldPrice,
-            quantity: quantity,
-            features: features,
-            featuresTwo: featuresTwo,
-            image1: image1,
-            image2: image2,
-            brandClass: (brand === 'Makita') ? 'MAKITA' : (brand === 'Bosch') ? 'BOSCH' : brand,
-            priceClass: oldPrice ? '' : 'no--OldPrice'
-        };
+        if (publishDateStr && brand && title && type && description && price && quantity && features && featuresTwo && image1 && image2) {
+            // Собираем все данные в объект
+            var toolData = {
+                publishDate: publishDate,
+                isNew: isNew,
+                brand: brand,
+                title: title,
+                description: description,
+                price: price,
+                oldPrice: oldPrice,
+                quantity: quantity,
+                features: features,
+                featuresTwo: featuresTwo,
+                image1: image1,
+                image2: image2,
+                brandClass: (brand === 'Makita') ? 'MAKITA' : (brand === 'Bosch') ? 'BOSCH' : brand,
+                priceClass: oldPrice ? '' : 'no--OldPrice'
+            };
 
-        toolCards.push(toolData); // Добавляем объект с данными в массив
+            toolCards.push(toolData); // Добавляем объект с данными в массив
+        } else {
+            console.log("Нет всех данных об объекте: " + title)
+        }
+
+
+
     }
 
     // Сортируем массив по дате публикации (от новой к старой)
