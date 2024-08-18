@@ -4,7 +4,7 @@ body {
     font-style: normal;
     margin: 0;
     padding: 0;
-    background-color: #ff0000;
+    background-color: #eeeeee;
 }
 
 
@@ -95,8 +95,8 @@ a:hover {
 .menu__inner {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Адаптация меню для узких экранов */
+        /* justify-content: space-between;
+        flex-wrap: wrap; Адаптация меню для узких экранов */
 }
 
 .menu__inner img {
@@ -342,8 +342,8 @@ a:hover {
 
     .menu__inner a {
         padding: 10px;
-        text-align: center;
-        width: 100%;
+        /* text-align: center; */
+        /* width: 100%; */
     }
 }
 
@@ -415,6 +415,8 @@ a:hover {
     transition: opacity 0.5s ease-in-out; /* Переход для плавного изменения прозрачности */
 }
 
+
+
 /* Для мобильных устройств */
 @media screen and (max-width: 768px) {
     .menu__inner-menu {
@@ -422,6 +424,21 @@ a:hover {
     }
     .menu__inner-menu.show {
         opacity: 1; /* Прозрачность 100% */
+    }
+
+    .infoh {
+        display: block;
+    }
+
+    .menu__inner {
+        display: block;
+        padding: 1px;
+        min-height: 60px;
+    }
+    .catalog-toggle {
+        display: block;
+        float: right;
+        width: 100px;
     }
 }
 
@@ -433,6 +450,11 @@ a:hover {
     }
     .menu__inner-menu.show {
         opacity: 1; /* Прозрачность 100% */
+    }
+
+    .menu__inner {
+        display: flex;
+        justify-content: space-between;
     }
 }
 
